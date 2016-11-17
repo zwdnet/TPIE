@@ -97,12 +97,16 @@ def Sub(Num):
 
 # 乘法
 def Mul(Num):
-    return None
+    res = [Num[0]*Num[3], Num[1]*Num[4]]
+    resNum = reduction(res)
+    return resNum
 
 
 # 除法
 def div(Num):
-    return None
+    res = [Num[0]*Num[4], Num[1]*Num[3]]
+    resNum = reduction(res)
+    return resNum
 
 
 # 主函数
