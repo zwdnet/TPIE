@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="243ed775-6548-413e-beaa-b0f4d6204e7b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Numbers/02AlarmClock/MyTimer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Numbers/02AlarmClock/clock.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Numbers/03Binary/conver.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Numbers/02AlarmClock/testEvent.py" afterPath="$PROJECT_DIR$/Numbers/02AlarmClock/testEvent.py" />
     </list>
     <ignored path="TPIE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clock.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clock.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Numbers/02AlarmClock/clock.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
@@ -53,6 +51,16 @@
               <folding>
                 <element signature="e#23#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conver.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Numbers/03Binary/conver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="7" column="83" selection-start-line="7" selection-start-column="83" selection-end-line="7" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,12 +97,13 @@
         <option value="$PROJECT_DIR$/Numbers/02AlarmClock/testEvent.py" />
         <option value="$PROJECT_DIR$/Numbers/02AlarmClock/MyTimer.py" />
         <option value="$PROJECT_DIR$/Numbers/02AlarmClock/clock.py" />
+        <option value="$PROJECT_DIR$/Numbers/03Binary/conver.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="478" />
-    <option name="y" value="125" />
+    <option name="x" value="649" />
+    <option name="y" value="68" />
     <option name="width" value="1066" />
     <option name="height" value="548" />
   </component>
@@ -145,7 +154,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="02AlarmClock" />
+              <option name="myItemId" value="03Binary" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -162,10 +171,6 @@
               <option name="myItemId" value="Numbers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="01Fractions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -179,7 +184,7 @@
     <property name="last_opened_file_path" value="C:/Anaconda3/python.exe" />
     <property name="recentsLimit" value="5" />
   </component>
-  <component name="RunManager" selected="Python.clock">
+  <component name="RunManager" selected="Python.conver">
     <configuration default="false" name="fractions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -227,6 +232,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TPIE" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numbers/02AlarmClock/clock.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="conver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Numbers/03Binary" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TPIE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numbers/03Binary/conver.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -365,16 +387,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.fractions" />
       <item index="1" class="java.lang.String" itemvalue="Python.testEvent" />
       <item index="2" class="java.lang.String" itemvalue="Python.clock" />
+      <item index="3" class="java.lang.String" itemvalue="Python.conver" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.clock" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testEvent" />
-        <item index="2" class="java.lang.String" itemvalue="Python.fractions" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.conver" />
+        <item index="1" class="java.lang.String" itemvalue="Python.clock" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testEvent" />
+        <item index="3" class="java.lang.String" itemvalue="Python.fractions" />
       </list>
     </recent_temporary>
   </component>
@@ -410,7 +434,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="478" y="125" width="1066" height="548" extended-state="0" />
+    <frame x="649" y="68" width="1066" height="548" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22095238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -518,6 +542,14 @@
           <folding>
             <element signature="e#23#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Numbers/03Binary/conver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="7" column="83" selection-start-line="7" selection-start-column="83" selection-end-line="7" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
