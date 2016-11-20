@@ -190,41 +190,92 @@
 #     ex = Example()
 #     sys.exit(app.exec_())
 
-import sys
-from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit, QTextEdit, QGridLayout, QApplication)
+# import sys
+# from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit, QTextEdit, QGridLayout, QApplication)
+#
+# class Example(QWidget):
+#     def __init__(self):
+#         super().__init__()
+#         self.initUI()
+#
+#     def initUI(self):
+#         title = QLabel("Title")
+#         author = QLabel("Author")
+#         review = QLabel("Review")
+#
+#         titleEdit = QLineEdit()
+#         authorEdit = QLineEdit()
+#         reviewEdit = QTextEdit()
+#
+#         grid = QGridLayout()
+#         grid.setSpacing(10)
+#
+#         grid.addWidget(title, 1, 0)
+#         grid.addWidget(titleEdit, 1, 1)
+#
+#         grid.addWidget(author, 2, 0)
+#         grid.addWidget(authorEdit, 2, 1)
+#
+#         grid.addWidget(review, 3, 0)
+#         grid.addWidget(reviewEdit, 3, 1, 5, 1)
+#
+#         self.setLayout(grid)
+#
+#         self.setGeometry(300, 300, 350, 300)
+#         self.setWindowTitle("Review")
+#
+#         self.show()
+#
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
+#     ex = Example()
+#     sys.exit(app.exec_())
 
-class Example(QWidget):
+import sys
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import (QMainWindow, QWidget, QPushButton, QLCDNumber, QSlider, QVBoxLayout, QApplication)
+
+
+class Example(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
 
     def initUI(self):
-        title = QLabel("Title")
-        author = QLabel("Author")
-        review = QLabel("Review")
+        lcd = QLCDNumber(self)
+        sld = QSlider(Qt.Horizontal, self)
 
-        titleEdit = QLineEdit()
-        authorEdit = QLineEdit()
-        reviewEdit = QTextEdit()
+        vbox = QVBoxLayout()
+        vbox.addWidget(lcd)
+        vbox.addWidget(sld)
 
-        grid = QGridLayout()
-        grid.setSpacing(10)
+        self.setLayout(vbox)
+        sld.valueChanged.connect(lcd.display)
 
-        grid.addWidget(title, 1, 0)
-        grid.addWidget(titleEdit, 1, 1)
+        btn1 = QPushButton("Button1", self)
+        btn1.move(30, 50)
 
-        grid.addWidget(author, 2, 0)
-        grid.addWidget(authorEdit, 2, 1)
+        btn2 = QPushButton("Button2", self)
+        btn2.move(150, 50)
 
-        grid.addWidget(review, 3, 0)
-        grid.addWidget(reviewEdit, 3, 1, 5, 1)
+        btn1.clicked.connect(self.buttonClicked)
+        btn2.clicked.connect(self.buttonClicked)
 
-        self.setLayout(grid)
+        self.statusBar()
 
-        self.setGeometry(300, 300, 350, 300)
-        self.setWindowTitle("Review")
-
+        self.setGeometry(300, 300, 250, 150)
+        self.setWindowTitle("Signal & slot")
         self.show()
+
+    def keyPressEvent(self, e):
+        if e.key() == Qt.key_Escape:
+            self.close()
+
+    def buttonClicked(self):
+        sender = self.sender()
+        self.statusBar().showMessage(sender.text() + " was pressed")
+
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

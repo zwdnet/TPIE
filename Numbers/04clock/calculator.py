@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 import sys
-from PyQt5.QtWidgets import (QWidget, QGridLayout, QPushButton, QLineEdit, QVBoxLayout, QApplication)
+from PyQt5.QtWidgets import (QWidget, QGridLayout,
+        QPushButton, QLineEdit, QVBoxLayout, QApplication, QMessageBox)
 
 
 class Calculator(QWidget):
@@ -15,6 +16,7 @@ class Calculator(QWidget):
         gridWidget = QWidget()
 
         numberEdit = QLineEdit()
+        numberEdit.setReadOnly(True)
 
         names = ["Cls", "Bck", "", "Close",
                  "7", "8", "9", "/",
@@ -29,6 +31,7 @@ class Calculator(QWidget):
                 continue
             button = QPushButton(name)
             gridBar.addWidget(button, *position)
+            button.clicked.connect(self.buttonClicked)
         qvbox.addWidget(numberEdit)
         gridWidget.setLayout(gridBar)
         qvbox.addWidget(gridWidget)
@@ -39,6 +42,13 @@ class Calculator(QWidget):
         self.setWindowTitle("Calculator")
         self.show()
 
+    def buttonClicked(self):
+        sender = self.sender()
+        self.dealData(sender.text())
+
+    def dealData(self, data):
+        self.numberEdit.setText(data) # 这里，程序自动关闭
+        print(data) # 这样就正常，没有出错。
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
