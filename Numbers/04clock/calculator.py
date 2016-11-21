@@ -15,8 +15,8 @@ class Calculator(QWidget):
         gridBar = QGridLayout()
         gridWidget = QWidget()
 
-        numberEdit = QLineEdit()
-        numberEdit.setReadOnly(True)
+        self.numberEdit = QLineEdit()
+        self.numberEdit.setReadOnly(True)
 
         names = ["Cls", "Bck", "", "Close",
                  "7", "8", "9", "/",
@@ -32,7 +32,7 @@ class Calculator(QWidget):
             button = QPushButton(name)
             gridBar.addWidget(button, *position)
             button.clicked.connect(self.buttonClicked)
-        qvbox.addWidget(numberEdit)
+        qvbox.addWidget(self.numberEdit)
         gridWidget.setLayout(gridBar)
         qvbox.addWidget(gridWidget)
 
@@ -47,7 +47,7 @@ class Calculator(QWidget):
         self.dealData(sender.text())
 
     def dealData(self, data):
-        self.numberEdit.setText(data) # 这里，程序自动关闭
+        self.numberEdit.SetText(data) # 这里，程序自动关闭
         print(data) # 这样就正常，没有出错。
 
 if __name__ == "__main__":
