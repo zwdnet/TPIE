@@ -47,7 +47,9 @@ class Calculator(QWidget):
         self.dealData(sender.text())
 
     def dealData(self, data):
-        self.numberEdit.SetText(data) # 这里，程序自动关闭
+        # self.numberEdit.SetText(data) # 这里，程序自动关闭
+        self.numberEdit.end(False)
+        self.numberEdit.insert(data)
         print(data) # 这样就正常，没有出错。
 
 if __name__ == "__main__":
