@@ -4,8 +4,7 @@
 
 
 def InputCardNumber():
-    number = input("请输入卡号，数字之间以空格分隔：")
-    number = number.split(" ")
+    number = input("请输入卡号(16位)：")
     if len(number) != 16:
         print("输入错误！")
         return None
